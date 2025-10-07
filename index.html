@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,11 +12,7 @@
       rel="stylesheet"
     />
      <!-- daisy ,tailwind,font font-awesome link -->
-    <script>
-  tailwind.config = {
-    plugins: [daisyui],
-  };
-</script>
+    
 
 
        <link
@@ -63,38 +59,39 @@
         <h1 class="text-2xl font-bold py-4 pl-10">Plant a Tree,Grow a Future</h1>
         <p class="text-gray-500 mx-1">join our mission to plant 1 million trees and make the earth greener for future</p>
         <div class="flex justify-center items-center mt-3">
-             <button class="btn  text-white bg-yellow-400 rounded-xl w-4/12 h-1/2 flex items-center justify-center ">Get involved</button>
+             <button class="btn  text-white bg-yellow-400 rounded-xl w-4/12 h- flex items-center justify-center ">Get involved</button>
         </div>
     </div>
     <div class="">
         <img class="" src="./assets/hero-leaf2.png" alt="">
     </div>
   </div>
-    <main  class="grid grid-cols-12 gap-5 mt-10  w-11/12 mx-auto min-h-screen bg-slate-100 ">
+    <main class="bg-slate-300 min-h-screen">
         
              <!-- categories --> 
-
-        <section class="  bg-slate-200 col-span-2 rounded-xl p-3">
+             <h1 class="font-bold text-3xl flex justify-center items-center">Choose your Trees</h1> 
+             <div class="w-11/12 mx-auto grid grid-cols-12 gap-5 mt-10 py-10">
+             
+        <section  class=" col-span-2 rounded-xl mt-4 h-[600px]">
             <h1 class="flex justify-center items-center pb-3 font-bold text-">Categories</h1>
-            <div>
-                <div class="grid grid-cols-1 gap-6 sticky top-0  ">     
-         <button class="btn btn-block  btn-category">All Trees</button>
-         <button class="btn btn-block shadow btn-category">Fruit Trees</button>
-         <button class="btn btn-block shadow btn-category">Flowering Trees</button>
-         <button class="btn btn-block shadow btn-category">Shade trees</button>
-         <button class="btn btn-block shadow btn-category">Medicinal trees</button>
-         <button class="btn btn-block shadow btn-category">Timber trees</button>
-         <button class="btn btn-block shadow btn-category">Evergreen trees</button>
-         <button class="btn btn-block shadow btn-category">Ornamental trees</button>
-         <button class="btn btn-block shadow btn-category">Bamboo</button>
-         <button class="btn btn-block shadow btn-category">Climber</button>
-         <button class="btn btn-block shadow btn-category">Aquatic Plants</button>
+          
+          <div id="category-container"  class="grid grid-cols-1 gap-6 sticky top-0  ">     
+         <button class="btn shadow ">All Trees</button>
+         <button class="">Fruit Trees</button>
+         <button class="">Flowering Trees</button>
+         <button class="">Shade trees</button>
+         <button class="">Medicinal trees</button>
+         <button class=" ">Timber trees</button>
+         <button class=" ">Evergreen trees</button>
+         <button class=" ">Ornamental trees</button>
+         <button class="">Bamboo</button>
+         <button class="">Climber</button>
+         <button class="">Aquatic Plants</button>
          </div>
-        </div>
         </section>
         <!-- simple card -->
-        <section class=" bg-slate-200 col-span-8 rounded-xl p-3">
-            <h1 class="font-bold text-2xl flex justify-center items-center mb-10">Choose your Trees</h1>
+        <section class=" col-span-8 rounded-xl p-3 mt-4" id="fruit-container">
+            
             <div class="card-container grid grid-cols-3 gap-5">
               
               
@@ -217,7 +214,7 @@
         </div>
         </section>
         <!-- simple cart  -->
-        <section class=" bg-white col-span-2 rounded-xl p-3">
+        <section class=" bg-white col-span-2 rounded-xl p-3 mt-4">
             <h1 class="font-bold flex justify-center items-center">Your Cart</h1>
             <aside>
             <div id="cart-box" class="md:col-span-3 bg-slate-200 rounded-lg shadow-lg m-2">
@@ -227,10 +224,11 @@
             </aside>
             
         </section>
-        
-         
+             </div>
+
            <!-- tree banner section  -->
-         <div class="  col-span-2 rounded-xl p-3"></div>
+            <div class="w-11/12 mx-auto grid grid-cols-12 gap-5 mt-10 py-10">
+                <div class="  col-span-2 rounded-xl p-3"></div>
         <section class="tree-banner  col-span-8 ">
           <h1 class="flex justify-center items-center font-bold text-2xl">About the Campaign</h1>
           <div class="flex justify-center items-center">
@@ -252,14 +250,13 @@
           </div>
          </section>
          <div class="  col-span-2 rounded-xl p-3"></div>
-     
+            
+            </div>
     </main>
-    
-  
-         <!-- impact section  -->
+   <!-- impact section  -->
        
    <section class=" bg-blue-100  py-8 ">
-      <h1 class="text-2xl font-bold text-center mb-6">Our impact</h1>
+      <h1 class="text-2xl font-bold text-center mb-6 text-green-600">Our impact</h1>
       <div class="flex justify-around items-center flex-wrap gap-6">
       <div class="bg-white rounded-lg p-4 shadow w-75 h-20 flex flex-col justify-center items-center">
         <h1 class="text-3xl text-green-600 font-semibold">500K+</h1>
@@ -303,4 +300,8 @@
     </footer>
     <script src="./index.js"></script>
 </body>
-</html>
+</html> 
+
+
+
+
