@@ -72,14 +72,14 @@
              <h1 class="font-bold text-3xl flex justify-center items-center">Choose your Trees</h1> 
              <div class="w-11/12 mx-auto grid grid-cols-12 gap-5 mt-10 py-10">
              
-        <section  class=" col-span-2 rounded bg-slate-200">
+        <section  class=" col-span-2 rounded-sm bg-slate-200 ">
             <h1 class="flex justify-center items-center pb-3 font-bold text-">Categories</h1>
           
           <div id="category-container"  class="grid grid-cols-1 gap-6 sticky top-0  ">     
          <button class=" ">All Trees</button>
          <button class="">Fruit Trees</button>
          <button class="">Flowering Trees</button>
-         <button class="">Shade trees</button>
+         <button class="">Shade trees</button> 
          <button class="">Medicinal trees</button>
          <button class=" ">Timber trees</button>
          <button class=" ">Evergreen trees</button>
@@ -214,7 +214,7 @@
         </div>
         </section>
         <!-- simple cart  -->
-        <section class=" bg-white col-span-2  ">
+        <section class=" bg-white col-span-2 rounded-md  ">
             <h1 class="font-bold flex justify-center items-center">Your Cart</h1>
             <aside>
             <div id="cart-box" class="md:col-span-3 bg-slate-200 rounded-lg shadow-lg m-2">
@@ -225,6 +225,20 @@
             
         </section>
              </div>
+                          <!-- You can open the modal using ID.showModal() method -->
+<button class="btn" onclick="my_modal_3.showModal()">open modal</button>
+<dialog id="my_modal_3" class="modal">
+  <div class="modal-box">
+    <form method="dialog">
+      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+    </form>
+   <div class=""id="details-container">
+    <div class="">
+      <img src="https://i.ibb.co.com/qY8qS7YN/champa-min.jpg" alt="">
+    </div>
+   </div>
+  </div>
+</dialog>
 
            <!-- tree banner section  -->
             <div class="w-11/12 mx-auto grid grid-cols-12 gap-5 mt-10 py-10">
@@ -252,7 +266,11 @@
          <div class="  col-span-2 rounded-xl p-3"></div>
             
             </div>
+
+
     </main>
+
+   
    <!-- impact section  -->
        
    <section class=" bg-blue-100  py-8 ">

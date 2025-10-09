@@ -25,14 +25,13 @@ const loadfruits = (id) => {
         .then((data) => displayfruits(data.plants));
 }
 
-//  {
-//       "id": 1,
-//       "image": "https://i.ibb.co.com/cSQdg7tf/mango-min.jpg",
-//       "name": "Mango Tree",
-//       "description": "A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green canopy offers shade, while its sweet fruits are rich in vitamins and minerals.",
-//       "category": "Fruit Tree",
-//       "price": 500
-//     },
+
+const loodfruitDetails = (id) => {
+  const url =`https://openapi.programming-hero.com/api/plants `
+   fetch(url)
+        .then((res) => res.json())
+        .then((data) => displayModal(data.plants));
+}
 
 const displayfruits = async (plants) =>{
   // console.log(plants);
@@ -43,10 +42,9 @@ const displayfruits = async (plants) =>{
     const fruitCard =document.createElement("div");
     fruitCard.innerHTML=`
            <!-- card  --> 
-           <div class="mb-5 rounded ">
-      <div class="card bg-base-100  shadow-sm   ">
+      <div onclick="loodfruitDetails()" class="card bg-base-100  shadow-sm  ">
      <figure class="px- pt-">
-    <img src="${plant.image}" class="w-full h-40  " />
+    <img src="${plant.image}" class="w-full h-40" />
      </figure>
     <div class=" p-2 space-y-1">
     <h1 class=" text-base font-medium">${plant.name}</h1>
@@ -61,12 +59,38 @@ const displayfruits = async (plants) =>{
      <button class=" font-normal w-full text-base text-white rounded-md bg-green-500 hover:bg-green-500 duration-300  py-[2px] cursor-pointer">Add to cart</button>
     </div>
      </div>
-</div>
       `;
       fruitContainer.append(fruitCard)
   });
 };
 
+const loadRandomData =()=>{
+  const url=`https://openapi.programming-hero.com/api/plants`
+  fetch(url)
+  .then((res)=>res.json())
+  .then((data)=>displayfruits(data.plants));
+}
+  // "id": 1,
+  //   "image": "https://i.ibb.co.com/cSQdg7tf/mango-min.jpg",
+  //   "name": "Mango Tree",
+  //   "description": "A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green canopy offers shade, while its sweet fruits are rich in vitamins and minerals.",
+  //   "category": "Fruit Tree",
+  //   "price": 500
+  // }
+
+const displayModal =(plants) =>{
+  const plantsContainer =document.getElementById("details-container");
+  plantsContainer.innerHTML=`
+  <div class="">
+      <img src="${plants.image}"
+       alt="">
+    </div>
+  <div class="">
+     
+    </div>
+    `;
+}
 
 
 loadCatagory(); 
+loadRandomData();
