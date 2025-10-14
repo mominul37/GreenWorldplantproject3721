@@ -19,6 +19,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  .active{
+    background-color: green;
+    color:white;
+  }
+</style>    
 
 </head>
 
@@ -69,7 +75,7 @@
         <h1 class="flex justify-center items-center pb-3 font-bold text-">Categories</h1>
 
         <div id="category-container" class="grid grid-cols- gap-6 sticky top-0  ">
-          <button class=" ">All Trees</button>
+          <button class="active ">All Trees</button>
           <button class="">Fruit Trees</button>
           <button class="">Flowering Trees</button>
           <button class="">Shade trees</button>
@@ -84,6 +90,10 @@
       </section>
       <!-- simple card -->
       <section class=" col-span-8 rounded-xl ">
+        <div id="loading-spinner"
+        class="min-h-[60vh] flex flex-col justify-center items-center hidden">
+          <span class="loading loading-bars loading-xl"></span>
+        </div>
 
         <div class="card-container grid grid-cols-3 gap-3" id="fruit-container">
 
