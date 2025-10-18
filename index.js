@@ -195,4 +195,7 @@ document.getElementById("details-container").addEventListener('click',(e)=>{
 function displayTotal =()=>{
   const totalamount =getElementById(".fruit-title")
 }
-
+function removeFromCart(index) {
+  cart.splice(index, 1);
+  displayCart(); // এটি নিজে থেকেই total পুনরায় হিসাব করে দেবে
+}
