@@ -116,15 +116,15 @@ function addToCart(btn) {
     // cartPlant = plant
     const card=btn.parentNode.parentNode.parentNode;
     const fruitTitle=card.querySelector(".fruits-title").innerText;
-    const fruitImg=card.querySelector(".fruit-img").src;
+    // const fruitImg=card.querySelector(".fruit-img").src;
     const fruitPrice=card.querySelector(".fruit-price").innerText;
     // const fruitPriceNum=Number(fruitPrice);
     const fruitPriceNum = parseInt(fruitPrice.replace(/[^\d]/g, ''));
 
-    console.log(fruitTitle,fruitImg,fruitPrice,fruitPriceNum);
+    console.log(fruitTitle,fruitPrice,fruitPriceNum);
     const selectItem ={
       fruitTitle:fruitTitle,
-      fruitImg:fruitImg,
+      // fruitImg:fruitImg,
       fruitPrice:fruitPriceNum,
     };
     cart.push(selectItem);
@@ -149,7 +149,7 @@ const displayCart = () => {
     newItem.classList.add("flex", "items-center", "gap-2", "p-2", "border-b");
 
     newItem.innerHTML = `
-      <img src="${item.fruitImg}" class="w-10 h-10 object-cover rounded" alt="">
+    
       <div class="flex-1 gap-4">
         <h2 class="text-sm font-medium">${item.fruitTitle}</h2>
         <p class="text-xs text-green-600">${item.fruitPrice}</p>
