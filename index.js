@@ -149,7 +149,6 @@ const displayCart = () => {
     newItem.classList.add("flex", "items-center", "gap-2", "p-2", "border-b");
 
     newItem.innerHTML = `
-    
       <div class="flex-1 gap-4">
         <h2 class="text-sm font-medium">${item.fruitTitle}</h2>
         <p class="text-xs text-green-600">${item.fruitPrice}</p>
@@ -193,5 +192,7 @@ loadRandomData();
 document.getElementById("details-container").addEventListener('click',(e)=>{
     console.log(e.target);
 });
-
+function displayTotal =()=>{
+  const totalamount =getElementById(".fruit-title")
+}
 
