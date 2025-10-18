@@ -192,10 +192,29 @@ loadRandomData();
 document.getElementById("details-container").addEventListener('click',(e)=>{
     console.log(e.target);
 });
-function displayTotal =()=>{
-  const totalamount =getElementById(".fruit-title")
+
+
+function displayCart() {
+  const cartContainer = document.getElementById("cart-box");
+  cartContainer.innerHTML = "";
+
+  total = 0;
+  cart.forEach((item, index) => {
+    total += item.fruitPrice;
+
+    const newItem = document.createElement("div");
+    newItem.classList.add("flex", "items-center", "gap-2", "p-2", "border-b");
+    newItem.innerHTML = `
+      <img src="${item.fruitImg}" class="w-10 h-10 object-cover rounded" alt="">
+      <div class="flex-1">
+        <h2 class="text-sm font-medium">${item.fruitTitle}</h2>
+        <p class="text-xs text-green-600">${item.fruitPrice}</p>
+      </div>
+      <button class="text-red-500 hover:text-red-700 text-sm font-bold" onclick="removeFromCart(${index})">✖</button>
+    `;
+    cartContainer.appendChild(newItem);
+  });
+
+  displayTotal(); // ✅ total update
 }
-function removeFromCart(index) {
-  cart.splice(index, 1);
-  displayCart(); // এটি নিজে থেকেই total পুনরায় হিসাব করে দেবে
-}
+
