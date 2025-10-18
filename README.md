@@ -86,14 +86,25 @@ https://openapi.programming-hero.com/api/plant/1
 
 
 #### 1) What is the difference between var, let, and const?
+  var:function-scoped,redeclare allowed,reassign allowed, hoisted but undefined.
+  let:Block-scoped,Redeclare not allowed,reassign allowed,hoisted but TDZ(Temporal Dead Zone).
+  const::Block-scoped,Redeclare not allowed,reassign not allowed,when value not change.
 
 #### 2) What is the difference between map(), forEach(), and filter()? 
+forEach(): Used to perform an operation on each element of an array. It does not return anything (always returns undefined).
+
+map(): Used to perform an operation on each element of an array and create a new array with the results.
+
+filter(): Used to select elements from an array that meet a certain condition. It returns a new array containing only the elements that satisfy the condition.
 
 #### 3) What are arrow functions in ES6?
-
+Arrow Function: A new syntax introduced in ES6 (ECMAScript 2015) that makes writing functions shorter and simpler.
 #### 4) How does destructuring assignment work in ES6?
-
+Destructuring assignment is a powerful feature in ES6 that allows you to easily extract values from arrays or objects and assign them to variables.
 #### 5) Explain template literals in ES6. How are they different from string concatenation?
+Template literals are a new feature in ES6 that make it easier to create strings and include dynamic values directly within them.
+
+the difference between template literals and traditional string concatenation clearly:
 
 ## ⚙️ Functionalities 
 
